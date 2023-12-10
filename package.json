@@ -1,0 +1,17 @@
+{
+  "name": "cv",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "upload": "rsync -avz --delete-before dist/ nordform@nordformat.ch:www/cv/",
+    "deploy": "npm run build && npm run upload"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}
