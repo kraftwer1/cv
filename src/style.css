@@ -1,6 +1,6 @@
 .portrait {
   position: absolute;
-  top: 12px;
   right: 0;
+  top: 12px;
   height: calc(100% - 12px);
 }
