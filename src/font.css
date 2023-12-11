@@ -1,0 +1,17 @@
+@font-face {
+  font-family: Fira Sans Condensed;
+  src: url("/Fira Sans Condensed/fira-sans-condensed-latin-300-normal.woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Fira Sans Condensed;
+  src: url("/Fira Sans Condensed/fira-sans-condensed-latin-400-normal.woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Fira Sans Condensed;
+  src: url("/Fira Sans Condensed/fira-sans-condensed-latin-500-normal.woff2");
+  font-weight: 500;
+}

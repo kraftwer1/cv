@@ -1,0 +1,38 @@
+body {
+  font-family: Fira Sans Condensed;
+  font-weight: 300;
+  /* background: #0e1938; */
+  background: #060d1a;
+  /* background: #010b13; */
+  color: #dbdce1;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 32px;
+}
+
+::selection {
+  background: #1a2d5a;
+}
