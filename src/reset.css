@@ -1,18 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Fira Sans Condensed;
   font-weight: 300;
   /* background: #0e1938; */
-  background: #060d1a;
+  /* background: #060d1a; */
   /* background: #010b13; */
-  color: #dbdce1;
+  background: var(--color-palette-1);
+  color: var(--color-palette-3);
   margin: 0;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
 }
 
 h1 {
@@ -29,10 +41,10 @@ h3 {
   font-size: 48px;
 }
 
-p {
-  font-size: 32px;
+ul {
+  list-style: none;
 }
 
 ::selection {
-  background: #1a2d5a;
+  background: var(--color-palette-2);
 }

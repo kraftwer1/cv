@@ -1,6 +1,52 @@
+.container {
+  flex: 1;
+  max-width: 1280px;
+  position: relative;
+  padding: 20vh 48px 0;
+}
+
 .portrait {
+  position: fixed;
+  right: calc((100vw - 1280px) / 2);
+  bottom: 0;
+  height: 100%;
+}
+
+.timeline {
+  padding-left: 120px;
+}
+
+.event {
+  padding-bottom: 48px;
+  position: relative;
+}
+
+.year {
   position: absolute;
-  right: 0;
-  top: 12px;
-  height: calc(100% - 12px);
+  left: -120px;
+  top: 8px;
+  color: var(--color-palette-3);
+}
+
+.event::before,
+.event::after {
+  content: " ";
+  position: absolute;
+  background: var(--color-palette-3);
+}
+
+.event::before {
+  width: 19px;
+  height: 19px;
+  top: 16px;
+  left: -48px;
+  border-radius: 50%;
+}
+
+.event:not(:last-of-type)::after {
+  width: 1px;
+  height: 100%;
+  left: calc(-48px + 9px);
+  top: 19px;
+  opacity: 0.3;
 }
