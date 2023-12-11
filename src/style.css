@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Fira Sans Condensed;
+  src: url("/Fira Sans Condensed/fira-sans-condensed-latin-500-normal.woff2");
+}
+
+::selection {
+  background: #1a2d5a;
+}
+
+body {
+  font-family: Fira Sans Condensed;
+  /* background: #0e1938; */
+  background: #060d1a;
+  /* background: #010b13; */
+  margin: 0;
+}
+
+h1 {
+  font-size: 90px;
+  color: #dbdce1;
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  height: calc(100% - 12px);
+}
