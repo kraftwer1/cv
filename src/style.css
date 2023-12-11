@@ -1,6 +1,19 @@
 @font-face {
   font-family: Fira Sans Condensed;
+  src: url("/Fira Sans Condensed/fira-sans-condensed-latin-300-normal.woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Fira Sans Condensed;
+  src: url("/Fira Sans Condensed/fira-sans-condensed-latin-400-normal.woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Fira Sans Condensed;
   src: url("/Fira Sans Condensed/fira-sans-condensed-latin-500-normal.woff2");
+  font-weight: 500;
 }
 
 ::selection {
@@ -9,16 +22,32 @@
 
 body {
   font-family: Fira Sans Condensed;
+  font-weight: 300;
   /* background: #0e1938; */
   background: #060d1a;
   /* background: #010b13; */
+  color: #dbdce1;
+  margin: 0;
+}
+
+h1,
+h2,
+p {
   margin: 0;
 }
 
 h1 {
-  font-size: 90px;
-  color: #dbdce1;
-  margin: 0;
+  font-size: 96px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 32px;
 }
 
 img {
