@@ -1,67 +1,135 @@
 .container {
-  width: 1440px;
-  padding: 48px;
+  display: flex;
+  flex-flow: column-reverse;
+  padding: var(--page-padding-mobile);
+  width: 360px;
 }
 
 .container > * {
-  flex: 0 0 50%;
-}
-
-.content {
-  padding-right: 24px; /* protect text from touching portrait */
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .business-card {
-  margin: 15vh 0 10vh;
+  text-align: center;
+  margin: 32px 0;
+}
+
+.business-card h2 {
+  margin-bottom: 16px;
 }
 
 .timeline {
-  padding-left: 124px;
+  padding-left: 90px;
 }
 
 .event {
-  padding-bottom: 48px;
   position: relative;
 }
 
-.year {
-  position: absolute;
-  left: -124px;
-  top: 8px;
-  color: var(--color-palette-3);
+.event:not(:last-of-type) {
+  padding-bottom: var(--page-padding-mobile);
 }
 
 .event::before,
-.event::after {
+.event:not(:last-of-type)::after {
   content: " ";
   position: absolute;
   background: var(--color-palette-3);
+  top: 6px;
 }
 
 .event::before {
-  width: 19px;
-  height: 19px;
-  top: 16px;
-  left: -48px;
+  width: calc(16px - 1px);
+  height: calc(16px - 1px);
   border-radius: 50%;
+  left: -38px;
 }
 
 .event:not(:last-of-type)::after {
   width: 1px;
   height: 100%;
-  left: calc(-48px + 9px);
-  top: 19px;
-  opacity: 0.3;
+  left: calc(-38px + 7px);
+}
+
+.year {
+  color: var(--color-palette-3);
+  position: absolute;
+  left: -90px;
+  top: 2px;
 }
 
 .portrait {
+  height: 250px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-palette-3);
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  align-items: start;
 }
 
 .portrait img {
-  position: fixed;
-  bottom: 0;
-  max-height: 95vh;
-  max-width: calc(1440px / 2);
+  width: 200px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    padding: var(--page-padding-desktop);
+    flex-flow: initial;
+  }
+
+  .container > * {
+    flex: 0 0 50%;
+  }
+
+  .content {
+    /* Protect text from touching portrait */
+    padding-right: calc(var(--page-padding-desktop) / 2);
+  }
+
+  .business-card {
+    text-align: initial;
+    margin: 15vh 0 10vh;
+  }
+
+  .timeline {
+    padding-left: 124px;
+  }
+
+  .event::before,
+  .event:not(:last-of-type)::after {
+    top: 12px;
+  }
+
+  .event:not(:last-of-type) {
+    padding-bottom: var(--page-padding-desktop);
+  }
+
+  .event::before {
+    left: -48px;
+  }
+
+  .event:not(:last-of-type)::after {
+    left: calc(-48px + 7px);
+  }
+
+  .year {
+    left: -124px;
+    top: 5px;
+  }
+
+  .portrait {
+    border-bottom: 0;
+    justify-content: end;
+  }
+
+  .portrait img {
+    position: fixed;
+    bottom: 0;
+    max-height: calc(100% - 48px);
+    max-width: calc(50% - 48px);
+    width: initial;
+  }
 }

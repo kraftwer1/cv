@@ -14,31 +14,28 @@ html {
 }
 
 body {
-  font-family: Fira Sans Condensed;
-  font-weight: 300;
-  /* background: #0e1938; */
-  /* background: #060d1a; */
-  /* background: #010b13; */
   background: var(--color-palette-1);
   color: var(--color-palette-3);
   margin: 0;
   display: flex;
   justify-content: center;
-  font-size: 28px;
+  font-family: Fira Sans Condensed;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 h1 {
-  font-size: 96px;
   font-weight: 500;
+  font-size: 48px;
 }
 
 h2 {
-  font-size: 64px;
   font-weight: 400;
+  font-size: 24px;
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 20px;
 }
 
 ul {
@@ -47,4 +44,22 @@ ul {
 
 ::selection {
   background: var(--color-palette-2);
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 88px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
 }
