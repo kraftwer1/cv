@@ -35,7 +35,7 @@
 .event:not(:last-of-type)::after {
   content: " ";
   position: absolute;
-  background: var(--color-palette-3);
+  background: var(--color-palette-2);
   top: 6px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .year {
-  color: var(--color-palette-3);
+  color: var(--color-palette-2);
   position: absolute;
   left: -90px;
   top: 2px;
@@ -62,7 +62,7 @@
 .portrait {
   height: 250px;
   overflow: hidden;
-  border-bottom: 1px solid var(--color-palette-3);
+  border-bottom: 1px solid var(--color-palette-2);
   display: flex;
   justify-content: center;
   align-items: start;
