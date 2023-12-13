@@ -1,19 +1,22 @@
 .container {
-  flex: 1;
-  max-width: 1280px;
-  position: relative;
-  padding: 20vh 48px 0;
+  width: 1440px;
+  padding: 48px;
 }
 
-.portrait {
-  position: fixed;
-  right: calc((100vw - 1280px) / 2);
-  bottom: 0;
-  height: 100%;
+.container > * {
+  flex: 0 0 50%;
+}
+
+.content {
+  padding-right: 24px; /* protect text from touching portrait */
+}
+
+.business-card {
+  margin: 15vh 0 10vh;
 }
 
 .timeline {
-  padding-left: 120px;
+  padding-left: 124px;
 }
 
 .event {
@@ -23,7 +26,7 @@
 
 .year {
   position: absolute;
-  left: -120px;
+  left: -124px;
   top: 8px;
   color: var(--color-palette-3);
 }
@@ -49,4 +52,16 @@
   left: calc(-48px + 9px);
   top: 19px;
   opacity: 0.3;
+}
+
+.portrait {
+  display: flex;
+  justify-content: end;
+}
+
+.portrait img {
+  position: fixed;
+  bottom: 0;
+  max-height: 95vh;
+  max-width: calc(1440px / 2);
 }
