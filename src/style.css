@@ -6,10 +6,14 @@
 
 .page {
   display: flex;
-  flex-flow: column-reverse;
   padding: var(--page-padding-mobile);
   width: 360px;
+  flex-flow: column;
+}
+
+.page.intro {
   min-height: 100vh;
+  flex-flow: column-reverse;
 }
 
 .page > * {
@@ -92,13 +96,14 @@
     flex-flow: unset;
   }
 
-  .page > * {
-    flex: 0 0 50%;
-  }
-
   .page.intro {
     display: flex;
     align-items: end;
+    flex-flow: unset;
+  }
+
+  .page > * {
+    flex: 0 0 50%;
   }
 
   .content {
