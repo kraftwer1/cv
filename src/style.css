@@ -17,6 +17,10 @@
   flex-grow: 0;
 }
 
+.title {
+  margin-bottom: var(--page-padding-mobile);
+}
+
 .business-card {
   text-align: center;
 }
@@ -34,7 +38,7 @@
 }
 
 .event:not(:last-of-type) {
-  padding-bottom: var(--page-padding-mobile);
+  padding-bottom: 16px;
 }
 
 .event::before,
@@ -42,7 +46,6 @@
   content: " ";
   position: absolute;
   background: var(--color-palette-2);
-  top: 6px;
 }
 
 .event::before {
@@ -50,12 +53,14 @@
   height: calc(16px - 1px);
   border-radius: 50%;
   left: -38px;
+  top: 6px;
 }
 
 .event:not(:last-of-type)::after {
   width: 1px;
   height: 100%;
   left: calc(-38px + 7px);
+  top: calc(6px + 10px);
 }
 
 .year {
@@ -100,6 +105,10 @@
     padding-right: calc(var(--page-padding-desktop) / 2);
   }
 
+  .title {
+    margin-bottom: var(--page-padding-desktop);
+  }
+
   .business-card {
     margin-bottom: 10vh;
     text-align: unset;
@@ -109,21 +118,18 @@
     padding-left: 124px;
   }
 
-  .event::before,
-  .event:not(:last-of-type)::after {
-    top: 12px;
-  }
-
   .event:not(:last-of-type) {
-    padding-bottom: var(--page-padding-desktop);
+    padding-bottom: 24px;
   }
 
   .event::before {
     left: calc(var(--page-padding-desktop) * -1);
+    top: 12px;
   }
 
   .event:not(:last-of-type)::after {
     left: calc(var(--page-padding-desktop) * -1 + 7px);
+    top: calc(12px + 10px);
   }
 
   .year {
