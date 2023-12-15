@@ -1,18 +1,23 @@
-.container {
+.main {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.section {
   display: flex;
   flex-flow: column-reverse;
   padding: var(--page-padding-mobile);
   width: 360px;
 }
 
-.container > * {
+.section > * {
   flex-shrink: 0;
   flex-grow: 0;
 }
 
 .business-card {
   text-align: center;
-  margin: 32px 0;
 }
 
 .business-card h2 {
@@ -73,14 +78,14 @@
 }
 
 @media (min-width: 1024px) {
-  .container {
+  .section {
     width: 100%;
     max-width: 1440px;
     padding: var(--page-padding-desktop);
-    flex-flow: initial;
+    flex-flow: unset;
   }
 
-  .container > * {
+  .section > * {
     flex: 0 0 50%;
   }
 
@@ -90,8 +95,7 @@
   }
 
   .business-card {
-    text-align: initial;
-    margin: 15vh 0 10vh;
+    text-align: unset;
   }
 
   .timeline {
@@ -108,11 +112,11 @@
   }
 
   .event::before {
-    left: -48px;
+    left: calc(var(--page-padding-desktop) * -1);
   }
 
   .event:not(:last-of-type)::after {
-    left: calc(-48px + 7px);
+    left: calc(var(--page-padding-desktop) * -1 + 7px);
   }
 
   .year {
@@ -121,15 +125,20 @@
   }
 
   .portrait {
-    border-bottom: 0;
+    height: unset;
     justify-content: end;
+    border-bottom: unset;
   }
 
   .portrait img {
+    width: unset;
+    max-height: calc(100vh - var(--page-padding-desktop));
     position: fixed;
     bottom: 0;
-    max-height: calc(100% - 48px);
-    max-width: calc(50% - 48px);
-    width: initial;
+    /* Ensure portrait is never wider than its container (which would overlap the content) */
+    max-width: min(
+      calc(100vw / 2 - var(--page-padding-desktop)),
+      calc(1440px / 2 - var(--page-padding-desktop))
+    );
   }
 }

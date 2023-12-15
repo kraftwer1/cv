@@ -17,8 +17,6 @@ body {
   background: var(--color-palette-1);
   color: var(--color-palette-2);
   margin: 0;
-  display: flex;
-  justify-content: center;
   font-family: Fira Sans Condensed;
   font-weight: 300;
   font-size: 18px;
