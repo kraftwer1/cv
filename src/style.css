@@ -23,10 +23,11 @@
 
 .business-card {
   text-align: center;
+  margin-top: 16px;
 }
 
 .business-card h2 {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .timeline {
@@ -110,8 +111,12 @@
   }
 
   .business-card {
-    margin-bottom: 10vh;
+    margin: 0 0 10vh;
     text-align: unset;
+  }
+
+  .business-card h2 {
+    margin: 0 0 32px;
   }
 
   .timeline {
