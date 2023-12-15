@@ -30,7 +30,7 @@
   margin-top: 16px;
 }
 
-.business-card h2 {
+.business-card .job-title {
   margin-bottom: 24px;
 }
 
@@ -120,7 +120,7 @@
     text-align: unset;
   }
 
-  .business-card h2 {
+  .business-card .job-title {
     margin: 0 0 32px;
   }
 
