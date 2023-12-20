@@ -26,6 +26,7 @@
 }
 
 .business-card {
+  margin-top: var(--page-padding-mobile);
   text-align: center;
 }
 
@@ -67,7 +68,7 @@
   width: 200px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .page {
     width: 100%;
     max-width: 1440px;
@@ -102,19 +103,6 @@
     margin-bottom: var(--page-padding-desktop);
   }
 
-  .timeline {
-    padding-left: 104px;
-  }
-
-  .event:not(:last-of-type)::after {
-    left: -32px;
-  }
-
-  .year {
-    left: -104px;
-    top: 5px;
-  }
-
   .portrait {
     height: unset;
     justify-content: end;
@@ -131,5 +119,20 @@
       calc(100vw / 2 - var(--page-padding-desktop)),
       calc(1440px / 2 - var(--page-padding-desktop))
     );
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline {
+    padding-left: 104px;
+  }
+
+  .event:not(:last-of-type)::after {
+    left: -32px;
+  }
+
+  .year {
+    left: -104px;
+    top: 5px;
   }
 }
