@@ -1,18 +1,14 @@
 .main {
   display: flex;
-  align-items: center;
-  flex-flow: column;
 }
 
 .page {
   display: flex;
   padding: var(--page-padding-mobile);
-  width: 360px;
   flex-flow: column;
 }
 
 .page.intro {
-  min-height: 100vh;
   flex-flow: column-reverse;
 }
 
@@ -66,6 +62,31 @@
 
 .portrait img {
   width: 200px;
+}
+
+@media print {
+  .main {
+    flex-wrap: wrap;
+  }
+
+  .page {
+    flex-basis: 50%;
+  }
+}
+
+@media screen {
+  .main {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .page {
+    width: 360px;
+  }
+
+  .page.intro {
+    min-height: 100vh;
+  }
 }
 
 @media (min-width: 768px) {
