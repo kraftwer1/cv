@@ -27,7 +27,6 @@
 
 .business-card {
   text-align: center;
-  margin: 16px 0 20vh;
 }
 
 .business-card .job-title {
@@ -96,7 +95,6 @@
   }
 
   .business-card {
-    margin: 0 0 10vh;
     text-align: unset;
   }
 
