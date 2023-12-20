@@ -31,6 +31,14 @@ a:hover {
   color: white;
 }
 
+a + a {
+  margin-left: 16px;
+}
+
+a img {
+  margin-right: 5px;
+}
+
 ul {
   padding-left: 32px;
 }
