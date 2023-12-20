@@ -32,7 +32,6 @@ a:hover {
 }
 
 ul {
-  list-style-type: none;
   padding-left: 32px;
 }
 
@@ -124,5 +123,11 @@ img {
 
   p {
     margin: 8px 0;
+  }
+}
+
+@media screen {
+  ul {
+    list-style-type: none;
   }
 }
