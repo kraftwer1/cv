@@ -21,6 +21,16 @@ body {
   font-size: 18px;
 }
 
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+  transition: color 200ms;
+}
+
+a:hover {
+  color: white;
+}
+
 ul {
   list-style-type: none;
   padding-left: 32px;
@@ -71,6 +81,10 @@ h3 {
 
 p {
   margin: 6px 0;
+}
+
+img {
+  vertical-align: middle;
 }
 
 @media (min-width: 1024px) {

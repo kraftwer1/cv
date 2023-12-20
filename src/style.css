@@ -31,7 +31,7 @@
 }
 
 .business-card .job-title {
-  margin-bottom: 24px;
+  margin-bottom: var(--page-padding-mobile);
 }
 
 .timeline {
@@ -101,7 +101,7 @@
   }
 
   .business-card .job-title {
-    margin: 0 0 32px;
+    margin-bottom: var(--page-padding-desktop);
   }
 
   .timeline {
