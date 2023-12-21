@@ -52,7 +52,7 @@
 }
 
 .portrait {
-  height: 250px;
+  height: 340px;
   overflow: hidden;
   border-bottom: 1px solid var(--color-palette-2);
   display: flex;
@@ -61,7 +61,7 @@
 }
 
 .portrait img {
-  width: 200px;
+  width: 240px;
 }
 
 @media print {
