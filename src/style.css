@@ -40,12 +40,11 @@
   background: var(--color-palette-2);
   width: 1px;
   height: 100%;
-  top: 13px;
+  top: 19px;
   left: -26px;
 }
 
 .year {
-  color: var(--color-palette-2);
   position: absolute;
   left: -80px;
   top: 2px;
@@ -149,6 +148,7 @@
   }
 
   .event:not(:last-of-type)::after {
+    top: 28px;
     left: -32px;
   }
 
