@@ -85,7 +85,7 @@
   }
 
   .page.intro {
-    min-height: 100vh;
+    min-height: 100svh;
   }
 }
 
@@ -132,7 +132,7 @@
 
   .portrait img {
     width: unset;
-    max-height: calc(100vh - var(--page-padding-desktop));
+    max-height: calc(100svh - var(--page-padding-desktop));
     position: fixed;
     bottom: 0;
     /* Ensure portrait is never wider than its container (which would overlap the content) */
