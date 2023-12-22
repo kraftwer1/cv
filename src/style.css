@@ -6,14 +6,6 @@
   display: flex;
   padding: var(--page-padding-mobile);
   flex-flow: column;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 300ms, transform 300ms;
-}
-
-.page.show {
-  opacity: 1;
-  transform: unset;
 }
 
 .page.intro {

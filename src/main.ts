@@ -1,5 +1,6 @@
 import "./variables.css"
 import "./reset.css"
+import "./helpers.css"
 import "./font.css"
 import "./style.css"
 
@@ -12,9 +13,19 @@ const intersectionObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return
 
+      intersectionObserver.unobserve(entry.target)
+
       entry.target.classList.add("show")
 
-      intersectionObserver.unobserve(entry.target)
+      const animatedChildEls = entry.target.querySelectorAll(".fade-in")
+
+      if (animatedChildEls) {
+        let timeout = 0
+
+        animatedChildEls.forEach((el) =>
+          setTimeout(() => el.classList.add("show"), (timeout += 400))
+        )
+      }
     })
   },
   {
