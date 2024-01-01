@@ -29,16 +29,12 @@ a {
 }
 
 a img {
-  margin-right: 8px;
+  margin-right: var(--icon-text-spacing);
   vertical-align: middle;
 }
 
 a:hover {
   color: white;
-}
-
-a + a {
-  margin-left: 24px;
 }
 
 ul {

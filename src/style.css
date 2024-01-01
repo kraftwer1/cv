@@ -12,6 +12,14 @@
   flex-flow: column-reverse;
 }
 
+.page.intro .link-container {
+  display: inline-block;
+}
+
+.page.intro .link-container + .link-container {
+  margin-left: 16px;
+}
+
 .page > * {
   flex-shrink: 0;
   flex-grow: 0;
@@ -31,7 +39,7 @@
 }
 
 .icon-with-text li img {
-  margin-right: 8px;
+  margin-right: var(--icon-text-spacing);
   position: relative;
   top: 3px;
 }
