@@ -8,3 +8,13 @@
   opacity: unset;
   transform: unset;
 }
+
+.margin {
+  margin: 24px 0;
+}
+
+@media (min-width: 1024px) {
+  .margin {
+    margin: 36px 0;
+  }
+}

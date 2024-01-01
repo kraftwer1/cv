@@ -4,7 +4,7 @@
 
 .page {
   display: flex;
-  padding: var(--page-padding-mobile);
+  padding: 0 var(--page-padding-mobile) var(--page-padding-mobile);
   flex-flow: column;
 }
 
@@ -26,16 +26,12 @@
 }
 
 .title {
-  margin-bottom: var(--page-padding-mobile);
+  margin-bottom: 24px;
 }
 
 .business-card {
   margin-top: var(--page-padding-mobile);
   text-align: center;
-}
-
-.business-card .job-title {
-  margin-bottom: var(--page-padding-mobile);
 }
 
 .icon-with-text li img {
@@ -137,7 +133,7 @@
   .page {
     width: 100%;
     max-width: 1440px;
-    padding: var(--page-padding-desktop);
+    padding: 0 var(--page-padding-desktop) var(--page-padding-desktop);
     flex-flow: unset;
   }
 
@@ -156,16 +152,8 @@
     padding-right: calc(var(--page-padding-desktop) / 2);
   }
 
-  .title {
-    margin-bottom: var(--page-padding-desktop);
-  }
-
   .business-card {
     text-align: unset;
-  }
-
-  .business-card .job-title {
-    margin-bottom: var(--page-padding-desktop);
   }
 
   .portrait {
@@ -188,6 +176,10 @@
 }
 
 @media (min-width: 1024px) {
+  .title {
+    margin-bottom: 36px;
+  }
+
   .bullets,
   .timeline {
     padding-left: 40px;

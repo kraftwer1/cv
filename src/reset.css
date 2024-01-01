@@ -42,7 +42,7 @@ ul {
 }
 
 li:not(:last-of-type) {
-  margin-bottom: 4px;
+  padding-bottom: 4px;
 }
 
 .h1,
@@ -69,8 +69,11 @@ h3 {
   font-size: 22px;
 }
 
-p {
-  margin: 8px 0;
+h1 + p,
+h2 + p,
+h3 + p,
+p + p {
+  margin-top: 8px;
 }
 
 @media screen {
@@ -99,7 +102,10 @@ p {
     font-size: 32px;
   }
 
-  p {
-    margin: 12px 0;
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  p + p {
+    margin-top: 12px;
   }
 }
