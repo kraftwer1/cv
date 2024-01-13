@@ -1,15 +1,19 @@
 .main {
   display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .page {
+  width: 360px;
   display: flex;
-  padding: 0 var(--page-padding-mobile) var(--page-padding-mobile);
   flex-flow: column;
+  padding: 0 var(--page-padding-mobile) var(--page-padding-mobile);
 }
 
 .page.intro {
   flex-flow: column-reverse;
+  min-height: 100svh;
 }
 
 .page.intro .content {
@@ -105,11 +109,17 @@
 
 @media print {
   .main {
+    flex-flow: unset;
+    align-items: unset;
     flex-wrap: wrap;
   }
 
   .page {
     flex-basis: 50%;
+  }
+
+  .page.intro {
+    min-height: unset;
   }
 
   /* Hide link to PDF in PDF */
@@ -119,21 +129,6 @@
 
   .icon-with-text {
     list-style-type: none;
-  }
-}
-
-@media screen {
-  .main {
-    flex-flow: column;
-    align-items: center;
-  }
-
-  .page {
-    width: 360px;
-  }
-
-  .page.intro {
-    min-height: 100svh;
   }
 }
 
