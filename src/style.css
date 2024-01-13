@@ -12,6 +12,10 @@
   flex-flow: column-reverse;
 }
 
+.page.intro .content {
+  text-align: center;
+}
+
 .page.intro .link-container {
   display: inline-block;
 }
@@ -31,7 +35,6 @@
 
 .business-card {
   margin-top: var(--page-padding-mobile);
-  text-align: center;
 }
 
 .icon-with-text li img {
@@ -109,6 +112,11 @@
     flex-basis: 50%;
   }
 
+  /* Hide link to PDF in PDF */
+  .page.intro .link-container:has(a[href="cv.pdf"]) {
+    display: none;
+  }
+
   .icon-with-text {
     list-style-type: none;
   }
@@ -143,6 +151,10 @@
     flex-flow: unset;
   }
 
+  .page.intro .content {
+    text-align: unset;
+  }
+
   .page > * {
     flex: 0 0 50%;
   }
@@ -150,10 +162,6 @@
   .content {
     /* Protect text from touching portrait */
     padding-right: calc(var(--page-padding-desktop) / 2);
-  }
-
-  .business-card {
-    text-align: unset;
   }
 
   .portrait {
