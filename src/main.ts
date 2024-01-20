@@ -1,8 +1,31 @@
 import "./variables.css"
+import "./animations.css"
 import "./reset.css"
-import "./helpers.css"
 import "./font.css"
 import "./style.css"
+import "./helpers.css"
+
+const scrollIndicatorEl =
+  document.querySelector<HTMLElement>(".scroll-indicator")!
+
+function onScrollOnce() {
+  scrollIndicatorEl.style.opacity = "0"
+}
+
+addEventListener("scroll", onScrollOnce, { once: true })
+
+// Show scrollIndicatorEl after a while
+setTimeout(() => {
+  // Only show scrollIndicatorEl when the page hasn't yet been scrolled
+  if (!scrollY) {
+    scrollIndicatorEl.classList.add("show")
+
+    setTimeout(() => {
+      scrollIndicatorEl.style.animationName = "fade-in-shake"
+      scrollIndicatorEl.style.animationDuration = "800ms"
+    }, 800)
+  }
+}, 2500)
 
 // Ensure browsers don't attempt to save the scroll state on page reload as it
 // would tamper with the animations initiated by the intersection observer
