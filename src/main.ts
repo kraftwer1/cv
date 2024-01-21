@@ -6,11 +6,16 @@ import "./style.css"
 import "./helpers.css"
 
 const scrollIndicatorEl =
-  document.querySelector<HTMLElement>(".scroll-indicator")!
+  document.querySelector<HTMLButtonElement>(".scroll-indicator")!
 
 function onScrollOnce() {
   scrollIndicatorEl.style.opacity = "0"
 }
+
+scrollIndicatorEl.addEventListener("click", () => {
+  const firstH2El = document.querySelector("h2")
+  firstH2El?.scrollIntoView({ behavior: "smooth", block: "center" })
+})
 
 addEventListener("scroll", onScrollOnce, { once: true })
 
