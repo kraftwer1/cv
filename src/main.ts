@@ -5,8 +5,42 @@ import "./font.css"
 import "./style.css"
 import "./helpers.css"
 
+import { isMobile } from "./helpers"
+
+const allPageEls = document.querySelectorAll(".page")
+const workExperiencePageEl = document.querySelector<HTMLDivElement>(
+  ".page.work-experience"
+)!
+const testimonialsPageEl =
+  document.querySelector<HTMLDivElement>(".page.testimonials")!
+
+const floatingPortraitEl = document.querySelector<HTMLElement>(
+  ".page.intro .portrait"
+)!
+
+const staticPortraitEl = document.querySelector<HTMLElement>(
+  ".page.work-experience .portrait"
+)!
+
 const scrollIndicatorEl =
   document.querySelector<HTMLButtonElement>(".scroll-indicator")!
+
+function onScrollOrResize() {
+  if (isMobile()) {
+    return
+  }
+
+  const workExperiencePageEnd =
+    workExperiencePageEl.offsetTop + workExperiencePageEl.offsetHeight
+
+  if (scrollY + innerHeight > workExperiencePageEnd) {
+    floatingPortraitEl.style.display = "none"
+    staticPortraitEl.style.display = "flex"
+  } else {
+    floatingPortraitEl.style.display = "flex"
+    staticPortraitEl.style.display = "none"
+  }
+}
 
 function onScrollOnce() {
   scrollIndicatorEl.style.opacity = "0"
@@ -17,6 +51,8 @@ scrollIndicatorEl.addEventListener("click", () => {
   firstH2El?.scrollIntoView({ behavior: "smooth", block: "center" })
 })
 
+addEventListener("scroll", onScrollOrResize)
+addEventListener("resize", onScrollOrResize)
 addEventListener("scroll", onScrollOnce, { once: true })
 
 // Show scrollIndicatorEl after a while
@@ -36,12 +72,12 @@ setTimeout(() => {
 // would tamper with the animations initiated by the intersection observer
 history.scrollRestoration = "manual"
 
-const intersectionObserver = new IntersectionObserver(
+const allPagesIntersectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return
 
-      intersectionObserver.unobserve(entry.target)
+      allPagesIntersectionObserver.unobserve(entry.target)
 
       entry.target.classList.add("show")
 
@@ -61,5 +97,4 @@ const intersectionObserver = new IntersectionObserver(
   }
 )
 
-const pageEls = document.querySelectorAll(".page")
-pageEls.forEach((el) => intersectionObserver.observe(el))
+allPageEls.forEach((el) => allPagesIntersectionObserver.observe(el))

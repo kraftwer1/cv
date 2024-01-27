@@ -21,12 +21,16 @@
   text-align: center;
 }
 
-.page.intro .link-container {
+.page.intro .content .link-container {
   display: inline-block;
 }
 
-.page.intro .link-container + .link-container {
+.page.intro .content .link-container + .link-container {
   margin-left: 16px;
+}
+
+.page.work-experience .portrait {
+  display: none;
 }
 
 .page > * {
@@ -157,6 +161,21 @@
     text-align: unset;
   }
 
+  .page.intro .portrait {
+    border-bottom: unset;
+  }
+
+  .page.intro .portrait img {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .page.work-experience .portrait {
+    align-items: end;
+    position: relative;
+    top: var(--page-padding-desktop);
+  }
+
   .page > * {
     flex: 0 0 50%;
   }
@@ -169,14 +188,11 @@
   .portrait {
     height: unset;
     justify-content: end;
-    border-bottom: unset;
   }
 
   .portrait img {
     width: unset;
     max-height: calc(100svh - var(--page-padding-desktop));
-    position: fixed;
-    bottom: 0;
     /* Ensure portrait is never wider than its container (which would overlap the content) */
     max-width: min(
       calc(100vw / 2 - var(--page-padding-desktop)),
