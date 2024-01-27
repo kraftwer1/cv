@@ -11,8 +11,6 @@ const allPageEls = document.querySelectorAll(".page")
 const workExperiencePageEl = document.querySelector<HTMLDivElement>(
   ".page.work-experience"
 )!
-const testimonialsPageEl =
-  document.querySelector<HTMLDivElement>(".page.testimonials")!
 
 const floatingPortraitEl = document.querySelector<HTMLElement>(
   ".page.intro .portrait"
