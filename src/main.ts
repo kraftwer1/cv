@@ -5,40 +5,10 @@ import "./font.css"
 import "./style.css"
 import "./helpers.css"
 
-import { isMobile } from "./helpers"
-
 const allPageEls = document.querySelectorAll(".page")
-const workExperiencePageEl = document.querySelector<HTMLDivElement>(
-  ".page.work-experience"
-)!
-
-const floatingPortraitEl = document.querySelector<HTMLElement>(
-  ".page.intro .portrait"
-)!
-
-const staticPortraitEl = document.querySelector<HTMLElement>(
-  ".page.work-experience .portrait"
-)!
 
 const scrollIndicatorEl =
   document.querySelector<HTMLButtonElement>(".scroll-indicator")!
-
-function onScrollOrResize() {
-  if (isMobile()) {
-    return
-  }
-
-  const workExperiencePageEnd =
-    workExperiencePageEl.offsetTop + workExperiencePageEl.offsetHeight
-
-  if (scrollY + innerHeight > workExperiencePageEnd) {
-    floatingPortraitEl.style.display = "none"
-    staticPortraitEl.style.display = "flex"
-  } else {
-    floatingPortraitEl.style.display = "flex"
-    staticPortraitEl.style.display = "none"
-  }
-}
 
 function onScrollOnce() {
   scrollIndicatorEl.style.opacity = "0"
@@ -49,8 +19,6 @@ scrollIndicatorEl.addEventListener("click", () => {
   firstH2El?.scrollIntoView({ behavior: "smooth", block: "center" })
 })
 
-addEventListener("scroll", onScrollOrResize)
-addEventListener("resize", onScrollOrResize)
 addEventListener("scroll", onScrollOnce, { once: true })
 
 // Show scrollIndicatorEl after a while
