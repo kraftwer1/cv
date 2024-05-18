@@ -1,20 +1,25 @@
-@keyframes fade-in-shake {
-  20% {
-    transform: translateY(-6px);
+@keyframes shake {
+  15% {
+    transform: translateY(calc(var(--shake-y) * -1));
   }
 
-  40% {
-    transform: translateY(6px);
+  21% {
+    transform: translateY(calc(var(--shake-y) * 0.5));
   }
 
-  60% {
-    transform: translateY(-3px);
+  25% {
+    transform: translateY(calc(var(--shake-y) * -0.5));
   }
 
-  80% {
-    transform: translateY(3px);
+  29% {
+    transform: translateY(calc(var(--shake-y) * 0.25));
   }
 
+  32% {
+    transform: translateY(calc(var(--shake-y) * -0.25));
+  }
+
+  34%,
   100% {
     transform: translateY(0);
   }

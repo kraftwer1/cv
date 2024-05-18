@@ -7,4 +7,11 @@
   --page-padding-desktop: 48px;
 
   --icon-text-spacing: 5px;
+  --shake-y: 12px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --shake-y: 48px;
+  }
 }

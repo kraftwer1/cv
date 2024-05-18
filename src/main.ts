@@ -57,12 +57,8 @@ addEventListener("scroll", onScrollOnce, { once: true })
 setTimeout(() => {
   // Only show scrollIndicatorEl when the page hasn't yet been scrolled
   if (!scrollY) {
-    scrollIndicatorEl.classList.add("show")
-
-    setTimeout(() => {
-      scrollIndicatorEl.style.animationName = "fade-in-shake"
-      scrollIndicatorEl.style.animationDuration = "800ms"
-    }, 800)
+    scrollIndicatorEl.style.opacity = "1"
+    scrollIndicatorEl.classList.add("shake")
   }
 }, 2500)
 
