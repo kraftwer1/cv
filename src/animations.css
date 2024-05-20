@@ -7,7 +7,7 @@
     transform: translateY(calc(var(--shake-y) * 0.5));
   }
 
-  25% {
+  26% {
     transform: translateY(calc(var(--shake-y) * -0.5));
   }
 
@@ -15,11 +15,7 @@
     transform: translateY(calc(var(--shake-y) * 0.25));
   }
 
-  32% {
-    transform: translateY(calc(var(--shake-y) * -0.25));
-  }
-
-  34%,
+  31%,
   100% {
     transform: translateY(0);
   }
