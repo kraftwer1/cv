@@ -35,7 +35,7 @@
 }
 
 .title {
-  margin-bottom: 24px;
+  margin-bottom: var(--page-padding-mobile);
 }
 
 .icon-with-text li img {
@@ -46,11 +46,11 @@
 
 .bullets,
 .timeline {
-  padding-left: 32px;
+  padding-left: var(--page-padding-mobile);
 }
 
 .timeline {
-  padding-left: 80px;
+  padding-left: 70px;
 }
 
 .bullets li,
@@ -61,18 +61,18 @@
 .bullets li::before,
 .timeline li::before {
   content: " ";
-  height: 13px;
-  width: 13px;
+  height: 11px;
+  width: 11px;
   border-radius: 50%;
   background: var(--color-palette-3);
   position: absolute;
-  top: 9px;
-  left: -32px;
+  top: 10px;
+  left: calc(var(--page-padding-mobile) * -1);
 }
 
 .bullets li + li,
 .timeline li + li {
-  margin-top: 24px;
+  margin-top: var(--page-padding-mobile);
 }
 
 .timeline li:not(:last-of-type)::after {
@@ -80,27 +80,28 @@
   position: absolute;
   background: var(--color-palette-2);
   width: 1px;
-  top: 22px;
-  bottom: -33px;
-  left: -26px;
+  top: 21px;
+  bottom: -34px;
+  left: -19px;
 }
 
 .year {
   position: absolute;
-  top: 2px;
-  left: -80px;
+  top: 3px;
+  left: -70px;
 }
 
 .portrait {
-  height: 324px;
+  height: 340px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: start;
+  margin-bottom: calc(var(--page-padding-mobile) * -0.5);
 }
 
 .portrait img {
-  width: 236px;
+  width: 258px;
 }
 
 .scroll-indicator {
