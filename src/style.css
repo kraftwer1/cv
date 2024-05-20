@@ -92,16 +92,16 @@
 }
 
 .portrait {
-  height: 340px;
+  height: 380px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-bottom: calc(var(--page-padding-mobile) * -0.5);
+  margin-bottom: -16px;
 }
 
 .portrait img {
-  width: 258px;
+  width: 288px;
 }
 
 .scroll-indicator {
