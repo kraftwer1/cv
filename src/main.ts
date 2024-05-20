@@ -8,7 +8,7 @@ import "./helpers.css"
 const allPageEls = document.querySelectorAll(".page")
 
 const scrollIndicatorEl =
-  document.querySelector<HTMLButtonElement>(".scroll-indicator")!
+  document.querySelector<HTMLAnchorElement>(".scroll-indicator")!
 
 function onScrollOnce() {
   scrollIndicatorEl.style.opacity = "0"

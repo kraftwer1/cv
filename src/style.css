@@ -118,6 +118,10 @@
   animation: shake 3s linear infinite;
 }
 
+.scroll-indicator img {
+  width: 100%;
+}
+
 @media print {
   .main {
     flex-flow: unset;
