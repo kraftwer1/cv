@@ -49,7 +49,7 @@ const allPagesIntersectionObserver = new IntersectionObserver(
         let timeout = 0
 
         animatedChildEls.forEach((el) =>
-          setTimeout(() => el.classList.add("show"), (timeout += 400))
+          setTimeout(() => el.classList.add("show"), (timeout += 200))
         )
       }
     })
