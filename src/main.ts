@@ -1,7 +1,8 @@
 import "./variables.css"
 import "./animations.css"
 import "./reset.css"
-import "./font.css"
+import "./fonts.css"
+import "./lists.css"
 import "./style.css"
 import "./helpers.css"
 
