@@ -119,6 +119,11 @@
   width: 100%;
 }
 
+.image {
+  border: 1px solid var(--color-palette-3);
+  border-radius: 6px;
+}
+
 @media print {
   .main {
     flex-flow: unset;
