@@ -12,6 +12,24 @@
   position: relative;
 }
 
+.teasers li {
+  display: grid;
+  column-gap: 16px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
+}
+
+.teasers li > p {
+  grid-column: 2;
+}
+
+.teasers li > img {
+  grid-row: 1 / 5;
+
+  /* Align with title */
+  margin-top: 6px;
+}
+
 .bullets li::before,
 .timeline li::before {
   content: " ";
@@ -24,6 +42,7 @@
   left: calc(var(--page-padding-mobile) * -1);
 }
 
+.teasers li + li,
 .bullets li + li,
 .timeline li + li {
   margin-top: var(--page-padding-mobile);
@@ -63,15 +82,18 @@
     left: -40px;
   }
 
-  .bullets li + li,
-  .timeline li + li {
-    margin-top: 24px;
-  }
-
   .timeline li:not(:last-of-type)::after {
     top: 31px;
     bottom: -38px;
     left: -32px;
+  }
+
+  .teasers li {
+    column-gap: 20px;
+  }
+
+  .teasers li > img {
+    margin-top: 9px;
   }
 
   .year {
