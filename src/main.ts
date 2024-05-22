@@ -3,7 +3,7 @@ import "./animations.css"
 import "./reset.css"
 import "./fonts.css"
 import "./lists.css"
-import "./style.css"
+import "./layout.css"
 import "./helpers.css"
 
 const allPageEls = document.querySelectorAll(".page")
