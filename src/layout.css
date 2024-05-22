@@ -21,11 +21,12 @@
   text-align: center;
 }
 
-.page.intro .content .link-container {
+.page.intro .link-container {
   display: inline-block;
+  margin: var(--page-padding-mobile) 0;
 }
 
-.page.intro .content .link-container + .link-container {
+.page.intro .link-container + .link-container {
   margin-left: 16px;
 }
 
@@ -92,7 +93,7 @@
     min-height: unset;
   }
 
-  /* Hide link to PDF in PDF */
+  /* Hide link to PDF in PDF (for print) */
   .page.intro .link-container:has(a[href="cv.pdf"]) {
     display: none;
   }
@@ -119,6 +120,10 @@
 
   .page.intro .content {
     text-align: unset;
+  }
+
+  .page.intro .link-container {
+    margin: unset;
   }
 
   .page > * {
