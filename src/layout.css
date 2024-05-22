@@ -14,11 +14,31 @@
 
 .page.intro {
   min-height: 100svh;
-  justify-content: end;
+}
+
+.page.intro .portrait {
+  display: flex;
+  flex: 1 0 0;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.page.intro .portrait img {
+  /* Cut off around arms */
+  margin-bottom: -30%;
+
+  /* Aspect ratio */
+  max-width: 100%;
+  object-fit: scale-down;
+  object-position: bottom;
 }
 
 .page.intro .content {
   text-align: center;
+}
+
+.page.intro .content h2 {
+  margin-bottom: var(--page-padding-mobile);
 }
 
 .page.intro .link-container {
@@ -43,19 +63,6 @@
   margin-right: var(--icon-text-spacing);
   position: relative;
   top: 3px;
-}
-
-.portrait {
-  height: 380px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  margin-bottom: -16px;
-}
-
-.portrait img {
-  width: 288px;
 }
 
 .scroll-indicator {
@@ -122,6 +129,28 @@
     text-align: unset;
   }
 
+  .page.intro .content h2 {
+    margin-bottom: var(--page-padding-desktop);
+  }
+
+  .page.intro .portrait {
+    height: unset;
+    justify-content: end;
+  }
+
+  .page.intro .portrait img {
+    position: fixed;
+    bottom: 0;
+    width: unset;
+    margin-bottom: unset;
+    max-height: calc(100svh - var(--page-padding-desktop));
+    /* Ensure portrait is never wider than its container (which would overlap the content) */
+    max-width: min(
+      calc(100vw / 2 - var(--page-padding-desktop)),
+      calc(1440px / 2 - var(--page-padding-desktop))
+    );
+  }
+
   .page.intro .link-container {
     margin: unset;
   }
@@ -133,23 +162,6 @@
   .content {
     /* Protect text from touching portrait */
     padding-right: calc(var(--page-padding-desktop) / 2);
-  }
-
-  .portrait {
-    height: unset;
-    justify-content: end;
-  }
-
-  .portrait img {
-    position: fixed;
-    bottom: 0;
-    width: unset;
-    max-height: calc(100svh - var(--page-padding-desktop));
-    /* Ensure portrait is never wider than its container (which would overlap the content) */
-    max-width: min(
-      calc(100vw / 2 - var(--page-padding-desktop)),
-      calc(1440px / 2 - var(--page-padding-desktop))
-    );
   }
 
   .scroll-indicator {
