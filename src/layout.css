@@ -37,7 +37,13 @@
   text-align: center;
 }
 
-.page.intro .content h2 {
+.page.intro .contact {
+  position: absolute;
+  top: var(--page-padding-mobile);
+  right: var(--page-padding-mobile);
+}
+
+.page.intro h2 {
   margin-bottom: var(--page-padding-mobile);
 }
 
@@ -119,7 +125,12 @@
     text-align: unset;
   }
 
-  .page.intro .content h2 {
+  .page.intro .contact {
+    top: var(--page-padding-desktop);
+    right: unset;
+  }
+
+  .page.intro h2 {
     margin-bottom: var(--page-padding-desktop);
   }
 

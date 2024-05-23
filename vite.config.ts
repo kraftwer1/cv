@@ -1,6 +1,13 @@
 import { resolve } from "path"
 import { defineConfig } from "vite"
 import handlebars from "vite-plugin-handlebars"
+import i18n from "./i18n.json"
+
+// Transform { "Hello": "Hallo" } into { "Hallo": "Hallo" }
+const de = Object.keys(i18n).reduce((acc, value) => {
+  acc[value] = value
+  return acc
+}, {})
 
 export default defineConfig({
   server: {
@@ -18,8 +25,8 @@ export default defineConfig({
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
-      helpers: {
-        translate: (key) => key,
+      context(pagePath) {
+        return pagePath === "/de/index.html" ? de : i18n
       },
     }),
   ],
