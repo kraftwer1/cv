@@ -29,6 +29,12 @@
   margin: 24px 0;
 }
 
+.icon {
+  margin-right: var(--icon-text-spacing);
+  position: relative;
+  top: 2px;
+}
+
 @media (min-width: 1024px) {
   .margin {
     margin: 36px 0;

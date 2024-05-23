@@ -59,12 +59,6 @@
   margin-bottom: var(--page-padding-mobile);
 }
 
-.icon-with-text li img {
-  margin-right: var(--icon-text-spacing);
-  position: relative;
-  top: 3px;
-}
-
 .scroll-indicator {
   height: var(--page-padding-mobile);
   width: var(--page-padding-mobile);
@@ -103,10 +97,6 @@
   /* Hide link to PDF in PDF (for print) */
   .page.intro .link-container:has(a[href="cv.pdf"]) {
     display: none;
-  }
-
-  .icon-with-text {
-    list-style-type: none;
   }
 }
 
