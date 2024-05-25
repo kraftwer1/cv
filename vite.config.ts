@@ -1,7 +1,7 @@
 import { resolve } from "path"
 import { defineConfig } from "vite"
 import handlebars from "vite-plugin-handlebars"
-import i18n from "./i18n.json"
+import de from "./de.json"
 
 export default defineConfig({
   server: {
@@ -20,8 +20,7 @@ export default defineConfig({
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
       helpers: {
-        translate: (lang, key) =>
-          lang === "de" && i18n[key] ? i18n[key] : key,
+        translate: (lang, key) => (lang === "de" && de[key] ? de[key] : key),
       },
     }),
   ],
