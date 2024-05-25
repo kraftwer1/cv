@@ -1,4 +1,7 @@
 {
-  "en": "de",
-  "English": "Deutsch"
+  "Language": "Sprache",
+  "Send mail": "Mail senden",
+
+  "de": "en",
+  "Deutsch": "English"
 }
