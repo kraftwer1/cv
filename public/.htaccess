@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Redirect root to language-specific directory based on browser language
+RewriteCond %{REQUEST_URI} ^/$
+
+# Check for German language preference
+RewriteCond %{HTTP:Accept-Language} ^(de) [NC]
+RewriteRule ^$ /de/ [R=301,L]
+
+# Check for English language preference
+RewriteCond %{HTTP:Accept-Language} ^(en) [NC]
+RewriteRule ^$ /en/ [R=301,L]
+
+# Fallback to English if no match
+RewriteRule ^$ /en/ [R=301,L]
