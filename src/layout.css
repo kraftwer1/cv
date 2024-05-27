@@ -37,10 +37,11 @@
   text-align: center;
 }
 
-.page.intro .contact {
+.page.intro .language {
   position: absolute;
   top: var(--page-padding-mobile);
-  right: var(--page-padding-mobile);
+  left: var(--page-padding-mobile);
+  text-transform: uppercase;
 }
 
 .page.intro h2 {
@@ -125,9 +126,9 @@
     text-align: unset;
   }
 
-  .page.intro .contact {
+  .page.intro .language {
     top: var(--page-padding-desktop);
-    right: unset;
+    left: var(--page-padding-desktop);
   }
 
   .page.intro h2 {
