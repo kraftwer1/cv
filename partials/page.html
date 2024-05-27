@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{translate lang 'en'}}">
+<html lang="{{t lang 'en'}}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,11 +21,9 @@
         </div>
 
         <div class="content">
-          <a href="/{{translate lang 'de'}}/" class="contact"
-            ><img
-              src="/iconoir/language.svg"
-              alt="{{translate lang 'Language'}}"
-            />{{translate lang "Deutsch"}}</a
+          <a href="/{{t lang 'de'}}/" class="contact"
+            ><img src="/iconoir/language.svg" alt="{{t lang 'Language'}}" />{{t
+            lang "Deutsch"}}</a
           >
 
           <h1 class="fade-in">Alex Kühne</h1>
@@ -35,7 +33,7 @@
             <a href="mailto:alex@nordformat.ch"
               ><img
                 src="/iconoir/send-mail.svg"
-                alt="{{translate lang 'Send mail'}}"
+                alt="{{t lang 'Send mail'}}"
               />alex@nordformat.ch</a
             >
           </div>
@@ -44,7 +42,7 @@
             <a href="/cv.pdf"
               ><img
                 src="/iconoir/cloud-download.svg"
-                alt="Als PDF öffnen"
+                alt="{{t lang 'Open as PDF'}}"
               />PDF</a
             >
           </div>
@@ -53,67 +51,67 @@
 
       <section class="fade-in page">
         <div class="content">
-          <h2 class="title">Über mich</h2>
+          <h2 class="title">{{t lang "About me"}}</h2>
 
           <p class="margin">
-            «Als Softwareentwickler aus Leidenschaft begeistert es mich,
-            Visionen zu realisieren und kontinuierlich weiterentwickeln. Mit
-            Innovation, Präzision, Eleganz – und natürlich Teamspirit!»
+            «{{t lang "As a software engineer of passion, I’m enthusiastic about
+            realising visions and improve them continuously. With innovation,
+            precision, elegance and, of course, team spirit!"}}»
           </p>
 
           <ul class="icons">
             <li>
               <img
                 src="/iconoir/city.svg"
-                alt="Berufserfahrung"
+                alt="{{t lang 'Professional experience'}}"
                 class="icon"
-              />20 Jahre Berufserfahrung
+              />{{t lang "20 years of professional experience"}}
             </li>
 
             <li>
               <img
                 src="/iconoir/map-pin.svg"
-                alt="Lokalität"
+                alt="{{t lang 'Location'}}"
                 class="icon"
-              />Zürich, Schweiz
+              />{{t lang "Zurich"}}
             </li>
 
             <li>
               <img
                 src="/iconoir/language.svg"
-                alt="Sprachen"
+                alt="{{t lang 'Languages'}}"
                 class="icon"
-              />Deutsch und Englisch
+              />{{t lang 'German and English'}}
             </li>
 
             <li>
               <img
                 src="/iconoir/learning.svg"
-                alt="Dozent"
+                alt="{{t lang 'Lecturer'}}"
                 class="icon"
-              />Dozent FH OST
+              />{{t lang "Lecturer Eastern Switzerland UAS"}}
             </li>
 
             <li>
               <img
                 src="/iconoir/heart.svg"
-                alt="Zivilstand"
+                alt="{{t lang 'Civil status'}}"
                 class="icon"
-              />Verheiratet
+              />{{t lang "Married"}}
             </li>
 
             <li>
               <img
                 src="/iconoir/group.svg"
-                alt="Familie"
+                alt="{{t lang 'Family'}}"
                 class="icon"
-              />Familienvater
+              />{{t lang "Family father"}}
             </li>
 
             <li>
               <img
                 src="/iconoir/birthday-cake.svg"
-                alt="Geburtsdatum"
+                alt="{{t lang 'Date of birth'}}"
                 class="icon"
               />20.01.1986
             </li>
@@ -123,25 +121,29 @@
 
       <section class="fade-in page">
         <div class="content">
-          <h2 class="title">Kompetenzen</h2>
+          <h2 class="title">{{t lang "Skills"}}</h2>
 
           <ul class="bullets">
             <li>
-              <h3>Entwicklung</h3>
-              <p>TypeScript, HTML, CSS, React, uvm.</p>
+              <h3>{{t lang "Development"}}</h3>
+              <p>TypeScript, HTML, CSS, React, etc.</p>
               <p>Git, Bash, Node, CI/CD, TDD</p>
             </li>
 
             <li>
-              <h3>Architektur</h3>
-              <p>Konzeption, Analyse, Design, Beratung</p>
-              <p>Strategie, Prozesse, Rekrutierung</p>
+              <h3>{{t lang "Architecture"}}</h3>
+              <p>{{t lang "Conception, analysis, design, consulting"}}</p>
+              <p>{{t lang "Strategy, processes, recruiting"}}</p>
             </li>
 
             <li>
-              <h3>Führung</h3>
-              <p>Technische Leitung agiler Entwicklungsteams</p>
-              <p>Schnittstelle für Management und Stakeholder</p>
+              <h3>{{t lang "Leadership"}}</h3>
+
+              <p>
+                {{t lang "Technical management of agile development teams"}}
+              </p>
+
+              <p>{{t lang "Intermediary for management and stakeholders"}}</p>
             </li>
           </ul>
         </div>
@@ -149,7 +151,7 @@
 
       <section class="fade-in page">
         <div class="content">
-          <h2 class="title">Ausbildung</h2>
+          <h2 class="title">{{t lang "Education"}}</h2>
 
           <ul class="timeline">
             <li>
@@ -159,9 +161,9 @@
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
-                />Zürich / London
+                />{{t lang "Zurich"}} / London
               </p>
 
               <p>SAE Institute / Middlesex University</p>
@@ -169,12 +171,15 @@
 
             <li>
               <div class="year">2006<br />2002</div>
-              <h3>EFZ Informatiker Applikationsentwicklung</h3>
+
+              <h3>
+                {{t lang "EFZ Information Technologist, Swiss Federal Diploma"}}
+              </h3>
 
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
                 />Brugg
               </p>
@@ -190,15 +195,17 @@
           <h2 class="title">Testimonials</h2>
 
           <p class="margin">
-            «Ein GitHub-Projekt sagt mehr als tausend Worte». Hier zwei meiner
-            Projekte – von Entwickler zu Entwickler.
+            {{t lang "«A GitHub repository says more than a thousand words».
+            Here are two of my projects – from developer to developer"}}.
           </p>
 
           <ul class="teasers">
             <li>
               <h3>Online-CV</h3>
 
-              <p>Mein Online-CV zur freien Verfügung – sharing is caring!</p>
+              <p>
+                {{t lang "My Online-CV, freely available, sharing is caring"}}!
+              </p>
 
               <p>
                 <img
@@ -221,8 +228,8 @@
               <h3>Tetrez</h3>
 
               <p>
-                Ein Tetris in 3D, inspiriert von Rez und seiner aufgrund des
-                Spielverhaltens dynamisch generierte Musik.
+                {{t lang "A Tetris clone in 3D, inspired by Rez and its
+                dynamically generated BGM, based on the playing behavior"}}.
               </p>
 
               <p>
@@ -251,24 +258,24 @@
 
       <section class="fade-in page work-experience">
         <div class="content">
-          <h2 class="title">Berufserfahrung</h2>
+          <h2 class="title">{{t lang "Professional experience"}}</h2>
 
           <ul class="timeline">
             <li>
-              <div class="year">Jetzt<br />2017</div>
-              <h3>Swisscom (Schweiz) AG</h3>
+              <div class="year">{{t lang "Now"}}<br />2017</div>
+              <h3>{{t lang "Swisscom (Switzerland) Ltd"}}</h3>
 
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
-                />Zürich
+                />{{t lang "Zurich"}}
               </p>
 
               <p>
-                Tech Lead Design System, der Basis für Plattformen wie
-                swisscom.ch
+                {{t lang "Tech Lead Design System, the foundation of platforms
+                like swisscom.ch"}}
               </p>
             </li>
 
@@ -279,14 +286,14 @@
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
-                />Zürich
+                />{{t lang "Zurich"}}
               </p>
 
               <p>
-                UI Architekt von Dashboards interaktiver Datenvisualisierungen
-                für Wertpapier–Börse und Versicherungsgesellschaft
+                {{t lang "UI architect of dashboards for stock market and
+                insurance consisting of interactive data visualizations"}}
               </p>
             </li>
 
@@ -297,13 +304,14 @@
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
-                />Zürich
+                />{{t lang "Zurich"}}
               </p>
 
               <p>
-                Frontendentwickler, Design– und Layoutengineer Fintechlösungen
+                {{t lang "Frontend developer, design- and layout engineer for
+                fintech solutions"}}
               </p>
             </li>
 
@@ -314,15 +322,15 @@
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
-                />Zürich
+                />{{t lang "Zurich"}}
               </p>
 
               <p>
-                Leiter Frontend–Team, Neuentwicklung mobiler Webapps für Titel
-                wie Tages–Anzeiger, Der Bund oder Le Matin sowie Entwicklung
-                interner CMS
+                {{t lang "Head of front end team, responsible for developing new
+                platforms for newspapers like «Tages-Anzeiger» or «Le Matin» as
+                well as internal CMS tools"}}
               </p>
             </li>
 
@@ -333,14 +341,14 @@
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
-                />Zürich
+                />Wetzikon
               </p>
 
               <p>
-                Softwareentwickler Intranetlösungen im Marketingbereich für den
-                Migros–Genossenschafts–Bund
+                {{t lang "Software engineer intranet solutions for the
+                Migros-Genossenschafts-Bund on site in Zurich"}}
               </p>
             </li>
 
@@ -351,13 +359,14 @@
               <p>
                 <img
                   src="/iconoir/map-pin.svg"
-                  alt="Lokalität"
+                  alt="{{t lang 'Location'}}"
                   class="icon"
-                />Zürich
+                />{{t lang "Zurich"}}
               </p>
 
               <p>
-                Applikationsentwickler im Fachgebiet Music–on–demand–Plattformen
+                {{t lang "Software engineer in the field of music-on-demand
+                platforms"}}
               </p>
             </li>
           </ul>

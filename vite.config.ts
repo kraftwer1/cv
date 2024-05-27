@@ -20,7 +20,13 @@ export default defineConfig({
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
       helpers: {
-        translate: (lang, key) => (lang === "de" && de[key] ? de[key] : key),
+        // "t" stands for "translate"
+        t: (lang, key) => {
+          // Trim
+          key = key.replace(/\s+/g, " ")
+
+          return lang === "de" && de[key] ? de[key] : key
+        },
       },
     }),
   ],
