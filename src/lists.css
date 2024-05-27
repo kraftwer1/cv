@@ -88,9 +88,14 @@
     left: -40px;
   }
 
+  .timeline li + li,
+  .teasers li + li {
+    margin-top: 36px;
+  }
+
   .timeline li:not(:last-of-type)::after {
     top: 31px;
-    bottom: -38px;
+    bottom: -50px;
     left: -32px;
   }
 
