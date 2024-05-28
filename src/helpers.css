@@ -4,16 +4,16 @@
   transition: opacity 400ms, transform 400ms;
 }
 
-.fade-in.fade-in--mobile-only {
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
+  .fade-in.fade-in--mobile-only {
     opacity: unset;
     transform: unset;
     transition: unset;
   }
 }
 
-.fade-in.fade-in--desktop-only {
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
+  .fade-in.fade-in--desktop-only {
     opacity: unset;
     transform: unset;
     transition: unset;
