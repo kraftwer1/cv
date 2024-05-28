@@ -50,26 +50,22 @@
           <h1 class="fade-in">Alex Kühne</h1>
           <h2 class="fade-in h3">Frontend Software Engineer</h2>
 
-          <div class="fade-in link-container">
-            <a href="mailto:alex@nordformat.ch"
-              ><img
-                src="/iconoir/send-mail.svg"
-                alt="{{t lang 'Send mail'}}"
-              />alex@nordformat.ch</a
-            >
-          </div>
+          <a href="mailto:alex@nordformat.ch" class="link-block fade-in"
+            ><img
+              src="/iconoir/send-mail.svg"
+              alt="{{t lang 'Send mail'}}"
+            />alex@nordformat.ch</a
+          >
 
-          <div class="fade-in link-container">
-            <a href="/cv.pdf"
-              ><img
-                src="/iconoir/cloud-download.svg"
-                alt="{{t lang 'Open as PDF'}}"
-              />PDF</a
-            >
-          </div>
+          <a href="/cv.pdf" class="link-block fade-in hidden-on-print"
+            ><img
+              src="/iconoir/cloud-download.svg"
+              alt="{{t lang 'Open as PDF'}}"
+            />PDF</a
+          >
         </div>
 
-        <a href="/{{t lang 'de'}}/" class="language fade-in"
+        <a href="/{{t lang 'de'}}/" class="language fade-in hidden-on-print"
           ><img src="/iconoir/language.svg" alt="{{t lang 'Language'}}" />{{t
           lang "de"}}</a
         >
@@ -175,7 +171,7 @@
         </div>
       </section>
 
-      <section class="fade-in page testimonials">
+      <section class="fade-in page testimonials hidden-on-print">
         <div class="content">
           <h2 class="title">Testimonials</h2>
 
@@ -285,7 +281,7 @@
         </div>
       </section>
 
-      <section class="fade-in page work-experience">
+      <section class="fade-in page professional-experience">
         <div class="content">
           <h2 class="title">{{t lang "Professional experience"}}</h2>
 
@@ -321,8 +317,8 @@
               </p>
 
               <p>
-                {{t lang "UI architect of dashboards for stock market and
-                insurance consisting of interactive data visualizations"}}
+                {{t lang "UI architect of interactive data visualizations for
+                stock market and insurance"}}
               </p>
             </li>
 

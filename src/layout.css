@@ -25,7 +25,7 @@
 
 .page.intro .portrait img {
   /* Cut off around arms */
-  margin-bottom: -30%;
+  margin-bottom: -22%;
 
   /* Aspect ratio */
   max-width: 100%;
@@ -46,15 +46,6 @@
 
 .page.intro h2 {
   margin-bottom: var(--page-padding-mobile);
-}
-
-.page.intro .link-container {
-  display: inline-block;
-  margin: var(--page-padding-mobile) 0;
-}
-
-.page.intro .link-container + .link-container {
-  margin-left: 16px;
 }
 
 .page > * {
@@ -101,9 +92,14 @@
     min-height: unset;
   }
 
-  /* Hide link to PDF in PDF (for print) */
-  .page.intro .link-container:has(a[href="cv.pdf"]) {
-    display: none;
+  .page.professional-experience {
+    /* Make it a bit wider than 50% so that the whole timeline is visible */
+    flex-basis: 75%;
+  }
+
+  /* Make all SVG icons appear dark for better visibility */
+  img[src$=".svg"] {
+    filter: invert(100%) brightness(0%);
   }
 }
 
