@@ -95,6 +95,24 @@
     min-height: unset;
   }
 
+  .page.intro .portrait {
+    position: relative;
+    right: 40px;
+    margin-bottom: 16px;
+  }
+
+  .page.intro .portrait img {
+    margin-bottom: unset;
+
+    /* Zoom in */
+    transform-origin: 35% 0;
+    transform: scale(2.3);
+
+    /* Aspect ratio */
+    object-fit: contain;
+    object-position: top;
+  }
+
   .page.professional-experience {
     /* Make it a bit wider than 50% so that the whole timeline is visible */
     flex-basis: 65%;
