@@ -79,8 +79,17 @@ li + li {
 }
 
 @media print {
+  body {
+    color: var(--color-palette-1);
+  }
+
   ul {
     list-style-type: initial;
+  }
+
+  /* Make all SVG icons appear dark for better visibility */
+  img[src$=".svg"] {
+    filter: contrast(0%);
   }
 }
 

@@ -86,6 +86,9 @@
 
   .page {
     flex-basis: 50%;
+
+    /* Ensure page isn't split across papers */
+    height: 50vh;
   }
 
   .page.intro {
@@ -94,12 +97,7 @@
 
   .page.professional-experience {
     /* Make it a bit wider than 50% so that the whole timeline is visible */
-    flex-basis: 75%;
-  }
-
-  /* Make all SVG icons appear dark for better visibility */
-  img[src$=".svg"] {
-    filter: invert(100%) brightness(0%);
+    flex-basis: 65%;
   }
 }
 
