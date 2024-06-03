@@ -61,3 +61,9 @@ const allPagesIntersectionObserver = new IntersectionObserver(
 )
 
 allPageEls.forEach((el) => allPagesIntersectionObserver.observe(el))
+
+// Initiate background animation
+document.body.animate(
+  { background: "var(--color-palette-1)" },
+  { duration: 1000, fill: "forwards" }
+)
