@@ -165,10 +165,6 @@
     );
   }
 
-  .page.intro .link-container {
-    margin: unset;
-  }
-
   .page > * {
     flex: 0 0 50%;
   }
