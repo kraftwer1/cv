@@ -28,6 +28,23 @@
   margin-left: 16px;
 }
 
+.background {
+  position: fixed;
+  width: max(200vw, 200vh);
+  height: max(200vw, 200vh);
+  z-index: -1;
+  top: 50vh;
+  left: calc((100vw - max(200vw, 200vh)) / 2);
+  background-color: var(--color-palette-3);
+  opacity: 0.005;
+  transform-origin: top center;
+  animation: rotate 120s linear infinite;
+}
+
+.background + .background {
+  animation-delay: 0.5s;
+}
+
 @media print {
   .hidden-on-print {
     display: none;
