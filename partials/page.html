@@ -12,7 +12,7 @@
     <link rel="alternate" href="https://alex-kuehne.com/en/" hreflang="en" />
     <link rel="alternate" href="https://alex-kuehne.com/de/" hreflang="de" />
 
-    <link rel="preload" href="/alex.webp" as="image" />
+    <link rel="preload" href="/alex-transparent.webp" as="image" />
 
     <link
       rel="preload"
@@ -41,6 +41,23 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <title>{{t lang "Alex Kuehne"}} – Frontend Software Engineer</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{t lang "Alex Kuehne"}}",
+        "jobTitle": "Frontend Software Engineer",
+        "image": "https://www.alex-kuehne.com/alex-portrait.webp",
+        "url": "https://www.alex-kuehne.com/",
+        "sameAs": [
+          "https://github.com/kraftwer1",
+          "https://x.com/alexkuehne",
+          "https://stackoverflow.com/users/1731095/kraftwer1",
+          "https://www.ost.ch/de/person/alexander-kuehne-5533"
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -52,7 +69,7 @@
         <div class="portrait fade-in fade-in--mobile-only">
           <img
             class="fade-in fade-in--desktop-only"
-            src="/alex.webp"
+            src="/alex-transparent.webp"
             alt="Portrait"
           />
         </div>

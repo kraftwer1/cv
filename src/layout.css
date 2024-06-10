@@ -97,20 +97,13 @@
 
   .page.intro .portrait {
     position: relative;
-    right: 40px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .page.intro .portrait img {
+    content: url("/alex-portrait.webp");
     margin-bottom: unset;
-
-    /* Zoom in */
-    transform-origin: 35% 0;
-    transform: scale(2.3);
-
-    /* Aspect ratio */
-    object-fit: contain;
-    object-position: top;
+    border-radius: 6px;
   }
 
   .page.professional-experience {
