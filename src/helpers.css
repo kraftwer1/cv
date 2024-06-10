@@ -65,6 +65,10 @@
     transform: unset;
     transition: unset;
   }
+
+  .link-block {
+    margin: unset;
+  }
 }
 
 @media (min-width: 1024px) {

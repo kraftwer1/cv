@@ -14,6 +14,7 @@
 
 .page.intro {
   min-height: 100svh;
+  padding-top: var(--page-padding-mobile);
 }
 
 .page.intro .portrait {
@@ -125,6 +126,7 @@
     display: flex;
     align-items: end;
     flex-direction: row-reverse;
+    padding-top: var(--page-padding-desktop);
   }
 
   .page.intro .content {
