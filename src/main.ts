@@ -86,7 +86,11 @@ document.body.animate(
 
 // Rotation
 const diagonalAngle = Math.atan(innerHeight / innerWidth)
-const offsetAngle = -0.15
+let offsetAngle = -0.15
+
+if (innerHeight > innerWidth) {
+  offsetAngle = -offsetAngle
+}
 
 backgroundEl.style.opacity = "0"
 
