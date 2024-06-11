@@ -92,7 +92,7 @@ backgroundEl.style.opacity = "0"
 
 backgroundEl.style.transform = `rotate(${
   diagonalAngle - offsetAngle
-}rad) scale(2)`
+}rad) scale(3)`
 
 backgroundEl.animate(
   { opacity: "0.025" },
@@ -100,12 +100,8 @@ backgroundEl.animate(
 )
 
 backgroundEl.animate(
-  [
-    {
-      transform: `rotate(${
-        diagonalAngle - offsetAngle + Math.PI * 2
-      }rad) scale(2)`,
-    },
-  ],
+  {
+    transform: `rotate(${diagonalAngle - offsetAngle + Math.PI * 2}rad)`,
+  },
   { iterations: Infinity, duration: 240 * 1000 }
 )
