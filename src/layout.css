@@ -149,7 +149,6 @@
 
   .page.intro .portrait img {
     position: fixed;
-    bottom: 0;
     width: unset;
     margin-bottom: unset;
     max-height: calc(100svh - var(--page-padding-desktop));

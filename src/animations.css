@@ -20,13 +20,3 @@
     transform: translateY(0);
   }
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(-160deg);
-  }
-
-  to {
-    transform: rotate(200deg);
-  }
-}

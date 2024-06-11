@@ -6,20 +6,34 @@ import "./lists.css"
 import "./layout.css"
 import "./helpers.css"
 
-const allPageEls = document.querySelectorAll(".page")
+function onScroll() {
+  const position =
+    (portraitImgOffset / document.documentElement.scrollHeight) * scrollY
 
-const scrollIndicatorEl =
-  document.querySelector<HTMLAnchorElement>(".scroll-indicator")!
+  portraitImgEl.style.bottom = `${-portraitImgOffset + position}px`
+}
 
 function onScrollOnce() {
   scrollIndicatorEl.style.opacity = "0"
 }
+
+const portraitImgOffset = 30
+
+const portraitImgEl = document.querySelector<HTMLElement>(".portrait img")!
+const backgroundEl = document.querySelector<HTMLElement>(".background")!
+const allPageEls = document.querySelectorAll(".page")
+
+portraitImgEl.style.bottom = `-${portraitImgOffset}px`
+
+const scrollIndicatorEl =
+  document.querySelector<HTMLAnchorElement>(".scroll-indicator")!
 
 scrollIndicatorEl.addEventListener("click", () => {
   const firstH2El = document.querySelector("h2")
   firstH2El?.scrollIntoView({ behavior: "smooth", block: "center" })
 })
 
+addEventListener("scroll", onScroll)
 addEventListener("scroll", onScrollOnce, { once: true })
 
 // Show scrollIndicatorEl after a while
@@ -62,8 +76,36 @@ const allPagesIntersectionObserver = new IntersectionObserver(
 
 allPageEls.forEach((el) => allPagesIntersectionObserver.observe(el))
 
-// Initiate background animation
+// Initiate background animations
+
+// Fade in
 document.body.animate(
   { background: "var(--color-palette-1)" },
   { duration: 1000, fill: "forwards" }
+)
+
+// Rotation
+const diagonalAngle = Math.atan(innerHeight / innerWidth)
+const offsetAngle = 0.15
+
+backgroundEl.style.opacity = "0"
+
+backgroundEl.style.transform = `rotate(${
+  diagonalAngle - offsetAngle
+}rad) scale(2)`
+
+backgroundEl.animate(
+  { opacity: "0.025" },
+  { duration: 1000, delay: 500, fill: "forwards" }
+)
+
+backgroundEl.animate(
+  [
+    {
+      transform: `rotate(${
+        diagonalAngle - offsetAngle + Math.PI * 2
+      }rad) scale(2)`,
+    },
+  ],
+  { iterations: Infinity, duration: 240 * 1000 }
 )
