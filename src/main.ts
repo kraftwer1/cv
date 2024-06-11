@@ -17,7 +17,7 @@ function onScrollOnce() {
   scrollIndicatorEl.style.opacity = "0"
 }
 
-const portraitImgOffset = 30
+const portraitImgOffset = 24
 
 const portraitImgEl = document.querySelector<HTMLElement>(".portrait img")!
 const backgroundEl = document.querySelector<HTMLElement>(".background")!
