@@ -36,11 +36,10 @@
   "Play": "Spielen",
   "Now": "Jetzt",
   "Swisscom (Switzerland) Ltd": "Swisscom (Schweiz) AG",
-  "the foundation of platforms like swisscom.ch": "der Basis für Plattformen wie swisscom.ch",
-  "UI architect of interactive data visualizations for stock market and insurance": "UI Architekt interaktiver Datenvisualisierungen für Wertpapier-Börse und Versicherungsgesellschaft",
-  "Frontend developer, design- and layout engineer for fintech solutions": "Frontendentwickler, Design- und Layoutengineer von Fintechlösungen",
-  "Head of front end team, responsible for developing new platforms for newspapers like «Tages-Anzeiger» or «Le Matin» as well as internal CMS tools": "Leiter Frontend-Team, Neuentwicklung mobiler Webapps für Titel wie «Tages-Anzeiger» oder «Le Matin» sowie Entwicklung interner CMS",
-  "Software engineer intranet solutions for the Migros-Genossenschafts-Bund on site in Zurich": "Softwareentwickler Intranetlösungen im Marketingbereich für den Migros-Genossenschafts-Bund vor Ort in Zürich",
-  "Software engineer in the field of music-on-demand platforms": "Applikationsentwickler im Fachgebiet Music-on-demand-Plattformen",
+  "UI architect, interactive data visualizations": "UI Architekt, Interaktive Datenvisualisierungen",
+  "Frontend developer, design- and layout engineer fintech": "Frontendentwickler, Design- und Layoutengineer, Fintech",
+  "Head of front end team, developing mobile webapps like «Tages-Anzeiger» and internal CMS": "Leiter Frontend-Team, Entwicklung mobiler Webapps wie «Tages-Anzeiger» und interner CMS",
+  "Software engineer, intranet solutions Migros marketing": "Softwareentwickler, Intranetlösungen Marketing Migros",
+  "Software engineer, music-on-demand platforms": "Applikationsentwickler, Music-on-demand-Plattformen",
   "de": "en"
 }
