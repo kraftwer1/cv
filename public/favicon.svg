@@ -17,7 +17,7 @@
     }
   </style>
 
-  <rect y="170" width="180" height="10" fill="red" />
+  <rect y="170" width="180" height="10" />
 
   <svg viewBox="0 0 110.5 69.1" xmlns="http://www.w3.org/2000/svg">
     <g>
