@@ -20,7 +20,6 @@ function onScrollOnce() {
 const portraitImgOffset = 24
 
 const portraitImgEl = document.querySelector<HTMLElement>(".portrait img")!
-const backgroundEl = document.querySelector<HTMLElement>(".background")!
 const allPageEls = document.querySelectorAll(".page")
 
 portraitImgEl.style.bottom = `-${portraitImgOffset}px`
@@ -64,48 +63,14 @@ const allPagesIntersectionObserver = new IntersectionObserver(
         let timeout = 0
 
         animatedChildEls.forEach((el) =>
-          setTimeout(() => el.classList.add("show"), (timeout += 200))
+          setTimeout(() => el.classList.add("show"), (timeout += 200)),
         )
       }
     })
   },
   {
     rootMargin: "-15%",
-  }
+  },
 )
 
 allPageEls.forEach((el) => allPagesIntersectionObserver.observe(el))
-
-// Initiate background animations
-
-// Fade in
-document.body.animate(
-  { background: "var(--color-palette-1)" },
-  { duration: 1000, fill: "forwards" }
-)
-
-// Rotation
-const diagonalAngle = Math.atan(innerHeight / innerWidth)
-let offsetAngle = -0.15
-
-if (innerHeight > innerWidth) {
-  offsetAngle = -offsetAngle
-}
-
-backgroundEl.style.opacity = "0"
-
-backgroundEl.style.transform = `rotate(${
-  diagonalAngle - offsetAngle
-}rad) scale(3)`
-
-backgroundEl.animate(
-  { opacity: "0.025" },
-  { duration: 1000, delay: 500, fill: "forwards" }
-)
-
-backgroundEl.animate(
-  {
-    transform: `rotate(${diagonalAngle - offsetAngle + Math.PI * 2}rad)`,
-  },
-  { iterations: Infinity, duration: 240 * 1000 }
-)

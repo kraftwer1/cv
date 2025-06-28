@@ -1,7 +1,10 @@
 .fade-in {
   opacity: 0;
   transform: translateY(75px);
-  transition: opacity 400ms, transform 400ms;
+
+  transition:
+    opacity 400ms,
+    transform 400ms;
 }
 
 .show {
@@ -26,16 +29,6 @@
 
 .link-block + .link-block {
   margin-left: 16px;
-}
-
-.background {
-  position: fixed;
-  height: 50vh;
-  width: 100vw;
-  top: 50vh;
-  z-index: -1;
-  transform-origin: top center;
-  background-color: var(--color-palette-3);
 }
 
 @media print {
