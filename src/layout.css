@@ -109,11 +109,6 @@
     margin-bottom: unset;
     border-radius: 6px;
   }
-
-  .page.professional-experience {
-    /* Make it a bit wider than 50% so that the whole timeline is visible */
-    flex-basis: 65%;
-  }
 }
 
 @media (min-width: 768px) {
