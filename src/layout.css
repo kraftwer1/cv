@@ -79,6 +79,10 @@
 }
 
 @media print {
+  li {
+    break-inside: avoid;
+  }
+
   .main {
     flex-flow: unset;
     align-items: unset;
