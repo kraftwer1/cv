@@ -86,10 +86,13 @@
   }
 
   .page {
-    flex-basis: 50%;
+    width: unset;
+  }
 
-    /* Ensure page isn't split across papers */
+  /* Ensure first page gets whole page exclusively */
+  .page:nth-of-type(-n + 4) {
     height: 50vh;
+    width: 50%;
   }
 
   .page.intro {
